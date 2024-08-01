@@ -11,8 +11,7 @@ pipeline {
             }
             steps {
                 sh '''
-                    if test -f /build/index.html; then
-                        echo "File exists and is a regular file."
+                    test -f build/index.html
                     npm test
                 '''
             }
